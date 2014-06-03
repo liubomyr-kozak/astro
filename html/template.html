@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+  <meta charset="UTF-8">
+  <title>{{title}} - {{name}}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width"/>
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+
+  <!-- стили -->
+  <link rel="stylesheet" href="/start.css" />
+
+  <!-- скрипты -->
+  <!--[if lt IE 9]><script src="/components/html5shiv/dist/html5shiv.js"></script><![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.fullPage.min.js"></script>
+  <script type="text/javascript" src="/js/application.js"></script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    {% block header %}
+    <header class="head">
+      <div class="container">
+        <div class="head__left">
+          <div class="logo">
+            <img src="../../img/head_logo.png" alt="" class="logo__img">
+          </div>
+          <div class="top-nav">
+            <ul class="top-nav__list">
+              <li class="top-nav__item">
+                <a href="" class="top-nav__link"><u>Subscribe & Download</u></a>   
+              </li>
+              <li class="top-nav__item">
+                <a href="" class="top-nav__link"><u>Mixtapes</u></a>  
+              </li>
+            </ul>
+          </div> 
+        </div>
+        <div class="head__right">
+          <div class="account">
+            <ul class="account__list">
+              <li class="account__item"><a href="" class="account__link"><u>Login</u></a></li>
+              <li class="account__item"><a href="" class="account__link"><u>Register</u></a></li>
+            </ul>
+          </div>  
+        </div>
+      </div>
+    </header>
+    {% endblock %}
+
+
+
+    {% block container %}
+      %page%.html
+    {% endblock %}
+  </div>
+
+
+  {% block footer %}
+  <footer class="foot">
+    <div class="container">
+      <div class="foot_left">
+        <div class="top-nav">
+            <ul class="top_nav__list">
+              <li class="top_nav__item">
+                <a href="" class="link top_nav__link"><u>Terms & Conditions</u></a>   
+              </li>
+              <li class="top_nav__item">
+                <a href="" class="link top_nav__link"><u>FAQ's</u></a>  
+              </li>
+                 <li class="top_nav__item">
+                <a href="" class="link top_nav__link"><u>Mixtapes</u></a>  
+              </li>
+            </ul>
+          </div> 
+      </div>
+      <div class="foot_right">
+        <div class="social">
+          <a href="" class="icon_fb"></a>
+          <a href="" class="icon_tw"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  {% endblock %}
+</body>
+</html>

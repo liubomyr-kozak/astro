@@ -1,0 +1,37 @@
+// todo: посмотреть http://www.artgorbunov.ru/bb/soviet/20130110/
+
+
+// однострочная
+.link {
+  @extend .p-link;
+
+  &:hover {
+    u, b, em, span {
+      &:after {
+        border-top: 1px solid;
+      }
+    }
+  }
+}
+
+// штрихпунктирчиком
+.dashed {
+  @extend .p-link;
+
+  u, b, em, span {
+    &:after {
+      border-top: 1px dashed;
+    }
+  }
+}
+
+// точечками
+.dotted {
+  @extend .dashed;
+
+  u, b, em, span {
+    &:after {
+      border-style: dotted;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{% extends 'template.html' %}
+
+{% block container %}
+<div class="main container">
+  <h1>{{projectname}}</h1>
+
+  <div class="row">
+    <div class="col-3">
+      <h3>Страницы</h3>
+      <ul style="list-style: decimal;">
+        {% for page in pages %}
+        <li><a href="{{ page }}">{{ page }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

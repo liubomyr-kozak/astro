@@ -1,0 +1,20 @@
+{% extends 'template.html' %}
+
+{% block container %}
+<div style="float: left; width: 49%;">
+  <h3>Блоки</h3>
+  <ul style="list-style: decimal;">
+    {% for block in blocks %}
+    <li><a href="/spb/block/{{ block }}">{{ block }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+<div style="float: right; width: 49%;">
+  <h3>Страницы</h3>
+  <ul style="list-style: decimal;">
+    {% for page in pages %}
+    <li><a href="/spb/page/{{ page }}">{{ page }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

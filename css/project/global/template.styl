@@ -1,0 +1,38 @@
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  font: basefont Regular;
+  background: url('img/bg_body.png');
+  color: textColor;
+  line-height: 1.6;
+  position: relative;
+  word-wrap: break-word;
+  select-color: darken(bgColor, 10);
+}
+
+.wrapper {
+  position: relative;
+  height: auto;
+  min-height: 100%;
+  margin-bottom: footerHeight * -1;
+}
+
+.container {
+  // min-width: 940px;
+  // max-width: 1440px;
+  max-width: 980px;
+
+  clear: fix;
+  margin-left: auto;
+  margin-right: auto;
+}

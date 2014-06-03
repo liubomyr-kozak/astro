@@ -1,0 +1,96 @@
+.p-link {
+  text-decoration: none;
+  /*white-space: nowrap;*/
+  cursor: pointer;
+
+  // обнуляем, чтобы пробелы внутри не образовывались из-за форматирования
+  letter-spacing: -4px;
+  word-spacing: -4px;
+  padding-top: .35em;
+
+  u, b, em, span {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    letter-spacing: normal;
+    word-spacing: normal;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+    }
+  }
+}
+
+.p-ib {
+  display: -moz-inline-stack; // ff2
+  display: inline-block;
+  zoom: 1; // Internet Explorer 6
+  *display: inline;
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+// очистка потока
+.p-clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+
+.p-invisible {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  visibility: hidden !important;
+}
+
+
+.p-visible {
+  position: static;
+  top: 0;
+  left: 0;
+  visibility: visible;
+}
+
+.p-text-hide {
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
+}
+
+.p-before {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.p-after {
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

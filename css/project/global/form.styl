@@ -1,0 +1,28 @@
+input,
+textarea,
+select,
+option {
+  color: form-c;
+  background: form-bgc;
+  border-color: form-bdc;
+}
+
+input,
+textarea {
+  placeholder: placeholderColor;
+  border: 1px solid form-bdc;
+}
+
+button {
+  border-radius: 3px;
+  padding: 7px 16px;
+  background-color: #d8d8d8;
+
+  &:hover {
+    background-color: darken(#d8d8d8, 5);
+  }
+
+  &:active {
+    background-color: darken(#d8d8d8, 10);
+  }
+}

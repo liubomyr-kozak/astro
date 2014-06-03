@@ -1,0 +1,141 @@
+[hidden] {
+  display: none;
+}
+
+// Формы и их элементы
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+button,
+input {
+  line-height: normal;
+  *overflow: visible;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+input[type="image"],
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 3px 0;
+*margin-top: 0;
+border-radius: 0;
+border: 0 \9;
+}
+
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  width: auto;
+  height: auto;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  cursor: pointer;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  height: auto;
+}
+
+select[multiple] {
+  height: inherit;
+  background-color: #fff;
+}
+
+// Reset the file input to browser defaults
+input[type="file"] {
+  width: auto;
+  padding: initial;
+  line-height: initial;
+  border: initial;
+  background-color: white;
+  background-color: initial;
+  box-shadow: none;
+  line-height: 18px \9;// Reset line-height for IE
+}
+
+// Set the height of select and file controls to match text inputs
+select,
+input[type="file"] {
+  height: 28px;
+}
+
+// Make textarea height behave
+textarea {
+  height: auto;
+}
+
+// Hidden inputs
+input[type="hidden"] {
+  display: none;
+}
+
+input[type=file]:focus,
+input[type=checkbox]:focus,
+select:focus {
+  outline: 1px dotted #666;
+}
+
+input[type="image"] {
+  border: 0;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  background-color: #c9c9c9;
+  border-color: #666666;
+  cursor: not-allowed;
+}
+
+// HTML5 invalid states
+input:focus:required:invalid,
+textarea:focus:required:invalid,
+select:focus:required:invalid {
+  color: #b94a48;
+  border-color: form-focus;
+
+  &:focus {
+    border-color: red;
+    box-shadow: 0 0 6px lighten(red, 20%);
+  }
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+button {
+  width: auto;
+  overflow: visible;
+}

@@ -1,0 +1,40 @@
+.account {
+  width 200px
+  height 30px
+  background-color #3b1761
+  float right
+
+  &__list {
+    clear: fix
+    text-align center
+  }
+  &__item {
+    display inline-block
+    line-height 30px
+    position relative
+    text-aling center
+    &:before {
+      content: ''
+      position absolute
+      left 0
+      top 10px
+      height 10px
+      width 1px
+      background white
+    }
+    &:first-child {
+      &:before {
+        display none
+      }
+    }
+  }
+  &__link {
+    padding 10px
+    href-pseudo #fff
+    u {
+        display: inline-block
+    }
+
+    
+  }
+}

@@ -1,0 +1,172 @@
+// display: inline-block hack
+display(how) {
+  if (how == inline-block) {
+    @extend .p-ib;
+  } else {
+    display: how;
+  }
+}
+
+// clearfix hack
+clear(how) {
+  if (how == fix) {
+    @extend .p-clearfix;
+  } else {
+    clear: how;
+  }
+}
+
+// simple icons mixin
+icon(w, h, name, position = 'left top') {
+  @extend .p-ib;
+  width: w;
+  height: h;
+  background: transparent url64('../img/icon/' + name + '.png') unquote(position) no-repeat;
+}
+
+
+// inline-block spacing hack
+font-spacing(v = normal) {
+  letter-spacing: v;
+  word-spacing: v;
+}
+
+// colorize form's placeholders
+placeholder(c){
+  &::-webkit-input-placeholder{
+    color: c;
+  }
+  &:-moz-placeholder{
+    color: c;
+  }
+}
+
+// selection color
+select-color(c = selectionColor){
+  * {
+    &::selection{
+      background: c;
+    }
+    &::-moz-selection{
+      background: c;  // Firefox
+    }
+    &::-webkit-selection{
+      background: c;  // Safari & Chrome
+    }
+
+    img{
+      &::selection{
+        background: c;
+      }
+      &::-moz-selection{
+        background: c;  // Firefox
+      }
+      &::-webkit-selection{
+        background: c;  // Safari & Chrome
+      }
+    }
+  }
+}
+
+color-link(color, colorHover, colorActive, borderColor = false, borderHoverColor = false){
+  color: color;
+
+  &:link, &:visited {
+    color: color
+  }
+  if(colorHover){
+    &:hover {
+      color: colorHover
+    }
+  }
+  if(colorActive) {
+    &:active {
+      color: colorActive
+    }
+  }
+  if(borderColor) {
+    u, b, em {
+      &:after {
+        border-top-color: borderColor
+      }
+    }
+    &:hover {
+      u, b, em {
+        &:after {
+          if(borderHoverColor) {
+            border-top-color: borderHoverColor
+          } else {
+            border-top-color: borderColor
+          }
+        }
+      }
+    }
+  }
+}
+color-href(color, colorHover, colorActive, borderColor = false, borderHoverColor = false){
+  color: color;
+
+  &:link, &:visited{
+    color: color
+  }
+  if(colorHover){
+    &:hover {
+      color: colorHover
+    }
+  }
+  if(colorActive) {
+    &:active {
+      color: colorActive
+    }
+  }
+  if(borderColor) {
+    u, b, em {
+      border-bottom-color: borderColor
+    }
+    &:hover {
+      u, b, em {
+        if(borderHoverColor) {
+          border-bottom-color: borderHoverColor
+        } else {
+          border-bottom-color: borderColor
+        }
+      }
+    }
+  }
+}
+
+
+// link colors mixin
+href(color = linkColor, colorHover = linkColorHover, colorActive = linkColorActive, colorVisited = linkColorVisited){
+  color: color;
+
+  &:visited {
+    color: colorVisited;
+  }
+
+  &:link{
+    color: color;
+  }
+
+  &:hover,
+  &:focus{
+    color: colorHover;
+  }
+
+  &:active{
+    color: colorActive;
+  }
+}
+
+
+// simple link colors mixin
+href-pseudo(color = linkColor){
+  color: color;
+
+  &:visited{
+    color: color;
+  }
+  &:link{
+    color: color;
+  }
+}
