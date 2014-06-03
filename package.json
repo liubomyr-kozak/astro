@@ -1,0 +1,15 @@
+{
+  "name": "springboard",
+  "private": true,
+  "dependencies": {},
+  "main": "springboard.js",
+  "devDependencies": {
+    "underscore": "*",
+    "fs-extra": "*",
+    "express": "~3",
+    "stylus": "*",
+    "autoprefixer-stylus": "*",
+    "csso-stylus": "*",
+    "swig": "*"
+  }
+}

@@ -1,0 +1,13 @@
+{
+	"name": "springboard",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"components"
+	],
+	"dependencies": {
+		"jquery": "*",
+		"underscore": "*",
+		"html5shiv": "*"
+	}
+}
