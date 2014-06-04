@@ -1,0 +1,166 @@
+.container-bg {
+  background-color: rgba(0, 0, 0, .14)
+  position: relative
+  min-height: 950px
+
+  &:before, &:after {
+    content: ''
+    position: absolute
+    top: 0
+    background-repeat: no-repeat
+    background-position: 0 0
+    height: 950px
+    width: 1px
+  }
+  &:before {
+    left: 0
+    background-image: url(img/bg-container--before.png)
+  }
+  &:after {
+    right: 0
+    background-image: url(img/bg-container--after.png)
+  }
+}
+
+/* something */
+.color-pink {
+  color: #c55a93
+}
+.title-page {
+  font-size: 41px
+  color: white
+  text-align: center
+  padding: 50px 0
+  margin: 0
+}
+.icon-edit {
+  icon: 32px 32px 'icon-edit'
+}
+/* /something */
+
+/* loader */
+.loader {}
+.loader__progress {}
+/* /loader */
+
+/* profile-subscr */
+.profile-subscr {
+  font-weight: 300
+}
+.profile-subscr__card {
+  background: rgb(45, 8, 86);
+  background: linear-gradient(36deg, rgba(45, 8, 86, .22) 0%, rgba(31, 107, 139, .22) 100%);
+}
+.profile-subscr__list {
+
+}
+.profile-subscr__item {
+  text-align: right
+
+  b {
+    float: left
+    font-weight: 600
+  }
+}
+.profile-subscr__load {}
+.profile-subscr__desc {
+  text-align: center
+}
+.profile-subscr__name {
+  font-size: 28px
+  display: block
+  line-height: 1.2
+}
+.profile-subscr__sub {
+  font-size: 21px
+  display: block
+  line-height: 1.2
+}
+.profile-subscr__sign {}
+.profile-subscr__action {}
+/* /profile-subscr */
+
+/* row-profile */
+.row-profile {
+  position: relative
+  clear: fix
+  
+  * {
+    box-sizing: border-box
+  }
+  color: white
+  
+  &:before {
+    content: ''
+    position: absolute
+    background-image: url(img/profile-row--separate.png)
+    width: 1px
+    height: 527px
+    left: 50%
+    top: 0
+  }
+}
+.row-profile__block {}
+.row-profile__col {
+  width: 50%
+  padding: 0 100px
+}
+.row-profile__col_dir_left {
+  float: left
+}
+.row-profile__col_dir_right {
+  float: right
+}
+.row-profile__title {
+  font-weight: 300
+  font-size: 36px
+  color: white
+}
+.row-profile__list {
+  border-top: 1px solid rgba(163, 150, 180, .4)
+}
+.row-profile__item {
+  position: relative
+  border-bottom: 1px solid rgba(163, 150, 180, .4)
+  font-weight: 300
+  padding: 1px
+}
+.row-profile__label {
+  font-size: 24px
+  color: white
+
+  small {
+    font-size: 13px
+  }
+  a {
+    font-size: 15px
+
+    &:visited, &:link {
+      color: white
+    }
+    &:hover, &:focus {
+      text-decoration: none
+    }
+  }
+}
+.row-profile__value {
+  font-size: 20px
+  color: #abb0bf
+}
+.row-profile__edit {
+  position: absolute
+  top: 0
+  right: 0
+
+  height: 50px
+  width: 50px
+  padding: 9px
+  border-radius: 25px
+  background-color: transparent
+  transition: background ease .2s
+
+  &:hover, &:focus {
+    background-color: #6e738a
+  }
+}
+/* / row-profile */
