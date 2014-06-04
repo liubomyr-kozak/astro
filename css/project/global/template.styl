@@ -1,3 +1,4 @@
+/*template*/
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
@@ -29,6 +30,7 @@ body {
 
 .main {
   margin-bottom: footerHeight * -1;
+  /*margin-bottom: footerHeight * -1;*/
 }
 
 .foot {
@@ -43,4 +45,39 @@ body {
   clear: fix;
   margin-left: auto;
   margin-right: auto;
+
+  &--bg_black{
+    background: rgba(0,0,0,.14)
+  }
+}
+
+
+// робимо елемент инлайновим вирівнюємо його по сентру
+.h_block-center{
+  font-size: 0 !important;
+  text-align: center;
+  display: inline;
+  
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle
+    height 100%
+  }
+  &__nth{
+    display: inline-block
+    vertical-align: middle
+    font-size: initial
+    text-align: left
+    max-height 100%
+  }
+}
+
+// clear
+.clear {
+  display: block;
+  clear: both;
+  font-size: 0;
+  overflow: hidden;
+  height: 0
 }
